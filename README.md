@@ -5,14 +5,14 @@
 > [ControlPlane Enterprise for Flux CD](https://fluxcd.control-plane.io/).
 >
 > The `d2` reference architecture comprised of
-> [d2-fleet](https://github.com/controlplaneio-fluxcd/d2-fleet),
-> [d2-infra](https://github.com/controlplaneio-fluxcd/d2-infra) and
-> [d2-apps](https://github.com/controlplaneio-fluxcd/d2-apps)
+> [d2-fleet](https://github.com/izerecord/d2-fleet),
+> [d2-infra](https://github.com/izerecord/d2-infra) and
+> [d2-apps](https://github.com/izerecord/d2-apps)
 > is a set of best practices and production-ready examples for using Flux Operator
 > and OCI Artifacts to manage the continuous delivery of Kubernetes infrastructure and
 > applications on multi-cluster multi-tenant environments.
 >
-> Download the guide: [Flux D2 Architectural Reference](https://raw.githubusercontent.com/controlplaneio-fluxcd/distribution/main/guides/ControlPlane_Flux_D2_Reference_Architecture_Guide.pdf)
+> Download the guide: [Flux D2 Architectural Reference](https://raw.githubusercontent.com/izerecord/distribution/main/guides/ControlPlane_Flux_D2_Reference_Architecture_Guide.pdf)
 
 ## Scope and Access Control
 
@@ -27,17 +27,17 @@ This repository is used to define the application components such as:
 This repository is reconciled on the cluster fleet by Flux as the **namespace admin**
 and can't contain Kubernetes cluster-wide definitions such as CRDs, Cluster Roles, Namespaces, etc.
 
-The platform team that manages the [d1-fleet repository](https://github.com/controlplaneio-fluxcd/d1-fleet)
+The platform team that manages the [d1-fleet repository](https://github.com/izerecord/d1-fleet)
 is responsible for assigning the namespaces to the dev teams and configuring Flux with the
 necessary RBAC to reconcile the `d1-apps` repository across the cluster fleet.
 
 The platform team is also responsible for setting up any cluster-wide resources that the applications
 depend on, such as CRD controllers, Ingress classes, Storage classes, etc. The cluster components
 managed by the platform team are defined in the
-[d1-infra repository](https://github.com/controlplaneio-fluxcd/d1-infra).
+[d1-infra repository](https://github.com/izerecord/d1-infra).
 
 Access to this repository is restricted to the dev teams and the
-[Flux bot account](https://github.com/controlplaneio-fluxcd/d1-fleet?tab=readme-ov-file#create-a-github-account-for-flux).
+[Flux bot account](https://github.com/izerecord/d1-fleet?tab=readme-ov-file#create-a-github-account-for-flux).
 The Flux bot should be the only account with direct push access to the `main` branch.
 
 ## Repository Structure
