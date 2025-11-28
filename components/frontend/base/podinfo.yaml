@@ -34,11 +34,5 @@ spec:
       interval: 60s
       additionalLabels:
         app.kubernetes.io/component: monitoring
-    ingress:
+    httpRoute:
       enabled: true
-      className: nginx
-      hosts:
-        - host: podinfo.${CLUSTER_DOMAIN}
-          paths:
-            - path: /
-              pathType: ImplementationSpecific
